@@ -1,5 +1,5 @@
 //checking if all rows have distinct values
-checkRow = (_sudoku) => {
+let checkRow = (_sudoku) => {
 
   let bool = true;
   for (let row of _sudoku) {
@@ -17,7 +17,7 @@ checkRow = (_sudoku) => {
 }
 
 //checking if all columns have distinct values
-checkColumn = (_sudoku) => {
+let checkColumn = (_sudoku) => {
 
   let bool = true;
   for (let col = 1; col <= 9; col++) {
@@ -35,7 +35,7 @@ checkColumn = (_sudoku) => {
 }
 
 //checking each 3x3 matrixes
-check_subs = (_sudoku) => {
+let check_subs = (_sudoku) => {
   split_bd = [0, 3, 6];
   let bool = true;
   for (let i of split_bd) {
@@ -48,7 +48,7 @@ check_subs = (_sudoku) => {
   return bool;
 }
 //checking if all values are unique in each 3x3 matrix
-check_each = (_sudoku, x, y) => {
+let check_each = (_sudoku, x, y) => {
 
   each = []
   for (let i = 0; i < 3; i++) {
